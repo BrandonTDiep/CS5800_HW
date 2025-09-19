@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object "course: Course" as course{
+    courseName = "Advanced Software Engineering"
+    instructor = instructor
+    textbook = textbook
+}
+
+object "instructor: Instructor" as instructor {
+    firstName = "Nima"
+    lastName = "Davarpanah"
+    officeNumber = "3-2636"
+}
+
+object "textbook: Textbook" as textbook {
+    title = "Clean Code"
+    author = "Robert C. Martin"
+    publisher = "Prentice Hall"
+}
+
+course o-- instructor
+course o-- textbook
+
+@enduml
