@@ -2,36 +2,29 @@
 'https://plantuml.com/object-diagram
 
 
-phpDemo1 *-- sourceFiles
-phpDemo1 *-- includePath
-phpDemo1 *-- remoteFiles
 
-sourceFiles *-- .phalcon
-sourceFiles *-- cache
-sourceFiles *-- public
-
-sourceFiles *-- file1
-sourceFiles *-- file2
-sourceFiles *-- file3
-
-
-object "phpDemo1: Folder" as phpDemo1{
+object "phpDemo1: Folder" as phpDemo1 {
     name = "php_demo1"
     subfolders = [sourceFiles, includePath, remoteFiles]
     files = []
 }
 
-object "sourceFiles: Folder" as sourceFiles{
+object "Source Files: Folder" as sourceFiles{
     name = "Source Files"
-    subfolders = [phalcon, cache, public]
-    files = [.htaccess, .htrouter.php, index.html]
+    subfolders = [phalcon, app, cache, public]
+    files = []
 }
-object "includePath: Folder" as includePath{
+object "Include Path: Folder" as includePath{
     name = "Include Path"
     subfolders = []
     files = []
 }
-object "remoteFiles: Folder" as remoteFiles{
+object "app: Folder" as app{
+    name = "app"
+    subfolders = []
+    files = []
+}
+object "Remote Files: Folder" as remoteFiles{
     name = "Remote Files"
     subfolders = []
     files = []
@@ -50,7 +43,7 @@ object "cache: Folder" as cache{
 object "public: Folder" as public{
     name = "public"
     subfolders = []
-    files = []
+    files = [.htaccess, .htrouter.php, index.html]
 }
 
 object ".htaccess: File" as file1{
@@ -62,5 +55,18 @@ object ".htrouter.php: File" as file2{
 object "index.html: File" as file3{
     name = "index.html"
 }
+
+phpDemo1 *-- sourceFiles
+phpDemo1 *-- includePath
+phpDemo1 *-- remoteFiles
+
+sourceFiles *-- .phalcon
+sourceFiles *-- app
+sourceFiles *-- cache
+sourceFiles *-- public
+
+public *-- file1
+public *-- file2
+public *-- file3
 
 @enduml

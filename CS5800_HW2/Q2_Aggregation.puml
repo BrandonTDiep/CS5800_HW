@@ -2,9 +2,7 @@
 'https://plantuml.com/object-diagram
 
 object "course: Course" as course{
-    courseName = "Advanced Software Engineering"
-    instructor = instructor
-    textbook = textbook
+    name = "Advanced Software Engineering"
 }
 
 object "instructor: Instructor" as instructor {

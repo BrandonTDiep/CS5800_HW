@@ -2,8 +2,8 @@
 'https://plantuml.com/class-diagram
 
 class Ship {
- -shipName : String
- -yearBuilt : String
+ #shipName : String
+ #yearBuilt : String
 
  +getShipName() : String
  +setShipName(name : String) : void

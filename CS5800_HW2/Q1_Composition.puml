@@ -7,6 +7,7 @@ Folder *-- Folder
 class File {
  -name : String
 
+ +File(name : String)
  +getName() : String
  +setName(name : String) : void
  +toString() : String
@@ -17,6 +18,7 @@ class Folder {
  -subfolders : ArrayList<Folder>
  -files : ArrayList<File>
 
+ +Folder()
  +getName() : String
  +setName(name : String) : void
  +removeSubfolder(subFolderName : String) : void
